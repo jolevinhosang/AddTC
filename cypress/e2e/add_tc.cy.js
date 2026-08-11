@@ -15,13 +15,12 @@ describe('Add Testcases', () => {
     cy.task('readExcel', 'testcases.xlsx').then((testCases) => {
 
       // Login
-      cy.visit('https://azzure.gocekers.com/login')
-
-      cy.get('input[type="email"]')
-        .type(Cypress.env('EMAIL'))
-
-      cy.get('input[type="password"]')
-        .type(Cypress.env('PASSWORD'))
+      cy.visit('https://azure.bakso.my.id/')
+      
+      cy.env(['EMAIL', 'PASSWORD']).then((env) => {
+        cy.get('input[type="email"]').type(env.EMAIL)
+        cy.get('input[type="password"]').type(env.PASSWORD)
+      })
 
       cy.get('button[type="submit"]')
         .click()
@@ -33,7 +32,7 @@ describe('Add Testcases', () => {
       // Loop through Excel rows
       cy.wrap(testCases).each((testCase) => {
 
-        cy.visit('https://azzure.gocekers.com/test-plans/33')
+        cy.visit('https://azure.bakso.my.id/test-plans/36')
 
         cy.contains('button', 'Add Test Case')
           .click()
