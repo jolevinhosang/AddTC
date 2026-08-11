@@ -1,5 +1,6 @@
 describe('Add Testcases', () => {
-
+  
+  const testPlanId = '41' // Replace with your actual test plan ID
   const qaMapping = {
     'Jolevin': 'Jolevin Armando Hosang — Quality Assurance',
     'Alfina': 'Alfina — Quality Assurance',
@@ -32,7 +33,7 @@ describe('Add Testcases', () => {
       // Loop through Excel rows
       cy.wrap(testCases).each((testCase) => {
 
-        cy.visit('https://azure.bakso.my.id/test-plans/36')
+        cy.visit(`https://azure.bakso.my.id/test-plans/${testPlanId}`)
 
         cy.contains('button', 'Add Test Case')
           .click()
