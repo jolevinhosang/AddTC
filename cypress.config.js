@@ -1,9 +1,14 @@
 const { defineConfig } = require("cypress");
 const XLSX = require('xlsx')
 const path = require('path')
+require('dotenv').config()
 
 module.exports = defineConfig({
   allowCypressEnv: false,
+  env: {
+    EMAIL: process.env.email,
+    PASSWORD: process.env.password,
+  },
 
   e2e: {
     setupNodeEvents(on, config) {

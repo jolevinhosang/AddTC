@@ -1,7 +1,13 @@
 describe('Add Testcases', () => {
 
   const qaMapping = {
-    'Jolevin': 'Jolevin Armando Hosang — Quality Assurance'
+    'Jolevin': 'Jolevin Armando Hosang — Quality Assurance',
+    'Alfina': 'Alfina — Quality Assurance',
+    'Faishal': 'Faishal Ghiffari — Quality Assurance',
+    'Feby': 'Feby Febriyansyah — Quality Assurance',
+    'Annash': 'Jamil Annashri — Quality Assurance',
+    'Adi': 'Laksana Adi — Lead Quality Assurance',
+    'Bram': 'Muhammad Bramantio Bimo Prakoso — Quality Assurance'
   }
 
   it('Create test cases from Excel', () => {
@@ -12,10 +18,10 @@ describe('Add Testcases', () => {
       cy.visit('https://azzure.gocekers.com/login')
 
       cy.get('input[type="email"]')
-        .type('Jolevin@kiriminaja.com')
+        .type(Cypress.env('EMAIL'))
 
       cy.get('input[type="password"]')
-        .type('password')
+        .type(Cypress.env('PASSWORD'))
 
       cy.get('button[type="submit"]')
         .click()
