@@ -1,0 +1,17 @@
+node_modules/
+cypress/screenshots/
+cypress/videos/
+.env
+.env.*
+!.env.example
+
+# Cypress
+cypress/downloads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
