@@ -47,6 +47,13 @@ The test cases should be provided in an Excel file named `testcases.xlsx` inside
 - `Platform`
 - `QA` (e.g., 'Jolevin')
 
+## Usage Instructions
+
+Before running the tests, make sure to follow these steps:
+
+1. Create Test Suite di [Azure](https://azzure.gocekers.com/test-plans).
+2. Ambil id/url Test Suite dan ubah di code line 36 pada file `cypress/e2e/add_tc.cy.js`.
+
 ## Running the Tests
 
 To open the Cypress Test Runner interactively:
